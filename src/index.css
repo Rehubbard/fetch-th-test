@@ -1,19 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: "Ubuntu", sans-serif;
+  }
+}
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --header: #ecfdf5;
+  --header-shadow: #10b981;
+}
+
+/* home header text effect */
+.home-header {
+  color: var(--header);
+  text-shadow: 6px 6px var(--header-shadow), 5.75px 5.75px var(--header-shadow),
+    5.5px 5.5px var(--header-shadow), 5.25px 5.25px var(--header-shadow),
+    5px 5px var(--header-shadow), 4.75px 4.75px var(--header-shadow),
+    4.5px 4.5px var(--header-shadow), 4.25px 4.25px var(--header-shadow),
+    4px 4px var(--header-shadow), 3.75px 3.75px var(--header-shadow),
+    3.5px 3.5px var(--header-shadow), 3.25px 3.25px var(--header-shadow),
+    3px 3px var(--header-shadow), 2.75px 2.75px var(--header-shadow),
+    2.5px 2.5px var(--header-shadow), 2.25px 2.25px var(--header-shadow),
+    2px 2px var(--header-shadow), 1.75px 1.75px var(--header-shadow),
+    1.5px 1.5px var(--header-shadow), 1.25px 1.25px var(--header-shadow),
+    1px 1px var(--header-shadow), 0.75px 0.75px var(--header-shadow),
+    0.5px 0.5px var(--header-shadow), 0.25px 0.25px var(--header-shadow);
 }

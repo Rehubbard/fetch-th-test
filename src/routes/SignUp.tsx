@@ -1,4 +1,4 @@
-const CreateUser = () => {
+const SignUp = () => {
   return (
     <div>
       <h1>Create User to join the egg nog single day festivity!</h1>
@@ -8,4 +8,4 @@ const CreateUser = () => {
   );
 };
 
-export default CreateUser;
+export default SignUp;

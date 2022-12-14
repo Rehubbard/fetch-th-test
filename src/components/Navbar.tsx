@@ -8,8 +8,8 @@ const Link = ({ to, label }: LinkProps) => {
       to={to}
       className={({ isActive }) =>
         isActive
-          ? "text-emerald-200 mr-8 underline hover:text-emerald-400"
-          : "text-emerald-200 mr-8 hover:text-emerald-400"
+          ? "text-emerald-50 mr-8 underline hover:text-pink-400"
+          : "text-emerald-50 mr-8 hover:text-pink-400"
       }
     >
       {label}
@@ -19,11 +19,11 @@ const Link = ({ to, label }: LinkProps) => {
 
 const Navbar = () => {
   return (
-    <div className="h-24 bg-emerald-900 flex items-center justify-between px-6">
+    <div className="h-24 bg-gradient-to-r from-emerald-900 to-teal-800 flex items-center justify-between px-6">
       <img src={eggnogLogo} alt="Eggnog logo" className="h-12 w-12" />
       <div className="flex flex-1 items-center justify-end">
         <Link to="/" label="Home" />
-        <Link to="/join" label="Join" />
+        <Link to="/sign-up" label="Sign up" />
       </div>
     </div>
   );

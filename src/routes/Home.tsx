@@ -1,9 +1,67 @@
-const Home = () => {
-  return (
-    <div>
-      <h1>Fellow egg nog lovers. Join us.</h1>
+import { useNavigate } from "react-router";
+import Button from "../components/Button";
 
-      <h5>One day. Many distinguished individuals. Unlimited egg nog.</h5>
+const Home = () => {
+  const navigate = useNavigate();
+
+  const onSignup = () => {
+    navigate("/sign-up");
+  };
+  return (
+    <div className="min-h-screen">
+      <div className="bg-gradient-to-r from-emerald-900 to-teal-800 py-24 px-6">
+        <h1 className="text-9xl font-bold home-header mt-2 mb-14 uppercase">
+          Egg Nog Extravaganza
+        </h1>
+
+        <h5 className="text-green-50">
+          One day. Many distinguished individuals.{" "}
+          <span className="text-emerald-400 font-bold">Unlimited</span> Egg nog
+          with maximum Christmas cheer.
+        </h5>
+      </div>
+
+      <div className="bg-neutral-800 px-8 py-28">
+        <h2 className="text-3xl mb-8 text-white text-center font-bold">
+          Gather 'Round
+        </h2>
+        <p className="text-white mb-10 text-center">
+          Come one, come all. Just make sure you're an Egg Nog Enthusiast. This
+          is a once in a lifetime event.
+        </p>
+        <div className="grid grid-cols-3 gap-8">
+          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-emerald-600 p-8">
+            <p className="text-emerald-600 uppercase font-light mb-2 text-lg">
+              When
+            </p>
+            <p className="text-emerald-600 text-5xl font-bold">Dec 27</p>
+          </div>
+          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-pink-400 p-8">
+            <p className="text-pink-400 uppercase font-light mb-2 text-lg">
+              Where
+            </p>
+            <p className="text-pink-400 text-5xl font-bold">123 NORTH POLE</p>
+          </div>
+          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-sky-500 p-8">
+            <p className="text-sky-500 uppercase font-light mb-2 text-lg">
+              Cost
+            </p>
+            <p className="text-sky-500 text-5xl font-bold">FREE*</p>
+          </div>
+        </div>
+        <p className="text-white text-right mt-8 text-sm">
+          * Be sure to sign up, fellow Egg Nog Enthusiast!
+        </p>
+      </div>
+
+      <div className="px-8 py-20">
+        <Button onClick={onSignup}>Sign Up</Button>
+        <h3 className="text-center">
+          Sign up required to be added to the Egg Nog Enthusiast list. You'll
+          also be added to our newsletter to be notified of important info
+          leading up to this event. Stay Noggy!
+        </h3>
+      </div>
     </div>
   );
 };
