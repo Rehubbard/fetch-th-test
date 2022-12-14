@@ -6,6 +6,7 @@ import SignUp from "./routes/SignUp";
 import ErrorPage from "./routes/ErrorPage";
 import Home from "./routes/Home";
 import Root from "./routes/Root";
+import getSignUpData from "./services/getSignUpData";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/sign-up",
         element: <SignUp />,
+        loader: getSignUpData,
       },
     ],
   },
