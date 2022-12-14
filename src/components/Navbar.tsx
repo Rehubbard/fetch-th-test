@@ -8,8 +8,8 @@ const Link = ({ to, label }: LinkProps) => {
       to={to}
       className={({ isActive }) =>
         isActive
-          ? "text-emerald-50 mr-8 underline hover:text-pink-400"
-          : "text-emerald-50 mr-8 hover:text-pink-400"
+          ? "text-pink-400 mr-8 hover:underline"
+          : "text-emerald-50 mr-8 hover:underline"
       }
     >
       {label}
