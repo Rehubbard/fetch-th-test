@@ -4,9 +4,10 @@ type Props = {
   className?: string;
   label: string;
   name: string;
+  options: string[];
 };
 
-const SelectInput = ({ className = "", label, name }: Props) => {
+const SelectInput = ({ className = "", label, name, options }: Props) => {
   const [field, { value, error }, helpers] = useField({ name, type: "select" });
 
   return (
@@ -19,9 +20,9 @@ const SelectInput = ({ className = "", label, name }: Props) => {
         {...field}
       >
         <option value="">Select {label}</option>
-        <option value="first">First</option>
-        <option value="second">Second</option>
-        <option value="third">Third</option>
+        {options?.map((opt) => (
+          <option value={opt}>{opt}</option>
+        ))}
       </select>
 
       <ErrorMessage

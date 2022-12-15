@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router";
 import TextInput from "../components/TextInput";
 import SelectInput from "../components/SelectInput";
 import * as Yup from "yup";
+import { SignUpDataResponse } from "../services/getSignUpData";
 
 const SignUp = () => {
   const signUpData = useLoaderData();
@@ -68,13 +69,19 @@ const SignUp = () => {
                   label="Occupation"
                   name="occupation"
                   className="mb-4"
+                  options={signUpData?.occupations}
                 />
 
-                <SelectInput label="State" name="state" className="mb-4" />
+                <SelectInput
+                  label="State"
+                  name="state"
+                  className="mb-10"
+                  options={signUpData?.states}
+                />
 
                 <button
                   type="submit"
-                  className="text-xl font-bold text-white bg-emerald-800 hover:bg-pink-400 hover:text-emerald-900 py-4 px-10 rounded-lg "
+                  className="w-40 self-center text-xl font-bold text-white bg-emerald-800 hover:bg-pink-400 hover:text-emerald-900 py-4 px-10 rounded-lg "
                 >
                   Submit
                 </button>
