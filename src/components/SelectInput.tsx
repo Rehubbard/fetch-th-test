@@ -19,9 +19,13 @@ const SelectInput = ({ className = "", label, name, options }: Props) => {
         className="bg-white p-4 text rounded border-neutral-400 border"
         {...field}
       >
-        <option value="">Select {label}</option>
+        <option value="" key="1">
+          Select {label}
+        </option>
         {options?.map((opt) => (
-          <option value={opt.value}>{opt.label}</option>
+          <option value={opt.value} key={opt.value}>
+            {opt.label}
+          </option>
         ))}
       </select>
 

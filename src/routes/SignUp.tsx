@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Formik } from "formik";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
 import { ColorRing } from "react-loader-spinner";
 import TextInput from "../components/TextInput";
 import SelectInput from "../components/SelectInput";
@@ -10,15 +10,21 @@ import postSignUp from "../services/postSignUp";
 
 const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
   // TODO: improve api data typing with react-router v6 data loaders
   const signUpData = useLoaderData() as SignUpDataResponse;
 
   const onSubmit = (values) => {
-    console.log("submit: ", values);
+    const { passwordConfirmation, ...signUpData } = values;
     setIsLoading(true);
-    postSignUp(values).finally(() => {
-      setIsLoading(false);
-    });
+    postSignUp(signUpData)
+      .then(() => {
+        setIsLoading(false);
+        navigate(`/confirmation/${signUpData.name}`);
+      })
+      .catch(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
