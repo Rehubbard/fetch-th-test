@@ -1,12 +1,6 @@
-type SignUpPostBody = {
-  name: string;
-  email: string;
-  password: string;
-  occupation: string;
-  state: string;
-};
+import { SignUpForm } from "../routes/SignUp";
 
-const postSignUp = async (data: SignUpPostBody) => {
+const postSignUp = async (data: SignUpForm) => {
   const response = await fetch(
     "https://frontend-take-home.fetchrewards.com/form",
     {

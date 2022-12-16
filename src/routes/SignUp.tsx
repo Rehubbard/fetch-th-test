@@ -14,7 +14,7 @@ const SignUp = () => {
   // TODO: improve api data typing with react-router v6 data loaders
   const signUpData = useLoaderData() as SignUpDataResponse;
 
-  const onSubmit = (values) => {
+  const onSubmit = (values: SignUpForm) => {
     const { passwordConfirmation, ...signUpData } = values;
     setIsLoading(true);
     postSignUp(signUpData)
@@ -131,6 +131,15 @@ const initialFormValues = {
   passwordConfirmation: "",
   occupation: "",
   state: "",
+};
+
+export type SignUpForm = {
+  name: string;
+  email: string;
+  password: string;
+  passwordConfirmation: string;
+  occupation: string;
+  state: string;
 };
 
 const validationSchema = Yup.object().shape({
