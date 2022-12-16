@@ -4,7 +4,7 @@ type Props = {
   className?: string;
   label: string;
   name: string;
-  options: string[];
+  options: { label: string; value: string }[];
 };
 
 const SelectInput = ({ className = "", label, name, options }: Props) => {
@@ -21,13 +21,15 @@ const SelectInput = ({ className = "", label, name, options }: Props) => {
       >
         <option value="">Select {label}</option>
         {options?.map((opt) => (
-          <option value={opt}>{opt}</option>
+          <option value={opt.value}>{opt.label}</option>
         ))}
       </select>
 
       <ErrorMessage
         name={name}
-        render={(msg) => <p className="text-red-900 text-sm">{msg}</p>}
+        render={(msg) => (
+          <p className="text-red-700 font-bold text-sm">{msg}</p>
+        )}
       />
     </div>
   );
