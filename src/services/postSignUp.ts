@@ -1,6 +1,6 @@
 import { SignUpForm } from "../routes/SignUp";
 
-const postSignUp = async (data: SignUpForm) => {
+const postSignUp = async (data: Omit<SignUpForm, "passwordConfirmation">) => {
   const response = await fetch(
     "https://frontend-take-home.fetchrewards.com/form",
     {
