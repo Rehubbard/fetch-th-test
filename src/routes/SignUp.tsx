@@ -28,14 +28,14 @@ const SignUp = () => {
   };
 
   return (
-    <div className="py-24 flex flex-col items-center bg-gradient-to-r from-emerald-900 to-teal-800 min-h-screen">
-      <h1 className="text-emerald-500 font-bold text-3xl mb-8">
-        Sign Up for the{" "}
+    <div className="py-10 px-6 md:py-24 flex flex-col items-center bg-gradient-to-r from-emerald-900 to-teal-800 min-h-screen">
+      <h1 className="text-emerald-500 font-bold text-2xl md:text-3xl mb-6 mb-8 text-center">
+        Sign Up for the <br className="md:hidden" />
         <span className="text-pink-400">Egg Nog Extravaganza</span>
       </h1>
 
-      <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-emerald-700 p-8 w-1/2">
-        <p className="text-neutral-900 text-sm text-center mb-4">
+      <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-emerald-700 p-6 md:p-8 w-full md:w-1/2">
+        <p className="text-neutral-900 text-sm text-center mb-6 md:mb-4">
           A little information is required to add you to the guest list. We'll
           see you there. Stay Noggy!
         </p>
@@ -50,40 +50,44 @@ const SignUp = () => {
                 onSubmit={formikProps.handleSubmit}
                 className="flex flex-col"
               >
-                <div className="flex justify-between mb-4">
-                  <TextInput label="Full Name" name="name" className="flex-1" />
+                <div className="flex flex-wrap justify-between md:mb-4">
+                  <TextInput
+                    label="Full Name"
+                    name="name"
+                    className="flex-1 mb-6"
+                  />
                   <TextInput
                     label="Email"
                     name="email"
-                    className="ml-8 flex-1"
+                    className="mb-6 md:ml-8 flex-1"
                     type="email"
                   />
                 </div>
-                <div className="flex justify-between mb-4">
+                <div className="flex flex-wrap justify-between md:mb-4">
                   <TextInput
                     label="Password"
                     name="password"
-                    className="flex-1"
+                    className="flex-1 mb-6 md:mb-0"
                     type="password"
                   />
                   <TextInput
                     label="Confirm Password"
                     name="passwordConfirmation"
-                    className="ml-8 flex-1"
+                    className="md:ml-8 flex-1 mb-6 md:mb-0"
                   />
                 </div>
 
                 <SelectInput
                   label="Occupation"
                   name="occupation"
-                  className="mb-4"
+                  className="mb-6 md:mb-4"
                   options={signUpData?.occupations}
                 />
 
                 <SelectInput
                   label="State"
                   name="state"
-                  className="mb-10"
+                  className="mb-8 md:mb-10"
                   options={signUpData?.states}
                 />
 

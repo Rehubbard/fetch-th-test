@@ -4,17 +4,25 @@ import eggnogLogo from "../assets/eggnog.png";
 const Confirmation = () => {
   const params = useParams();
   return (
-    <div className="py-24 flex flex-col items-center bg-gradient-to-r from-emerald-900 to-teal-800 min-h-screen">
+    <div className="py-10 px-6 md:py-24 md:px-8 flex flex-col items-center bg-gradient-to-r from-emerald-900 to-teal-800 min-h-screen">
       <div className="flex items-center mb-8">
-        <img src={eggnogLogo} alt="Eggnog logo" className="h-16 w-16 mr-8" />
-        <h1 className="text-emerald-500 font-bold text-3xl">
+        <img
+          src={eggnogLogo}
+          alt="Eggnog logo"
+          className="hidden md:block h-16 w-16 mr-8"
+        />
+        <h1 className="text-emerald-500 font-bold text-2xl md:text-3xl text-center">
           Thanks {params?.name}, we're{" "}
           <span className="text-pink-400">eggstatic</span> to have you!
         </h1>
-        <img src={eggnogLogo} alt="Eggnog logo" className="h-16 w-16 ml-8" />
+        <img
+          src={eggnogLogo}
+          alt="Eggnog logo"
+          className="hidden md:block h-16 w-16 ml-8"
+        />
       </div>
 
-      <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-emerald-700 p-8 w-1/2">
+      <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-emerald-700 p-6 md:p-8 w-full md:w-1/2">
         <h4 className="text-neutral-900 text-lg font-bold text-center mb-4">
           More Details for the Big Day
         </h4>

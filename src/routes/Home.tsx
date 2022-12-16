@@ -34,11 +34,12 @@ const Home = () => {
           Gather 'Round
         </h2>
         <p className="text-white mb-10 text-center">
-          Come one, come all. Just make sure you're an Egg Nog Enthusiast. This
-          is a once in a lifetime event.
+          We're gathering everyone who loves egg nog for a legendary event.
+          There will be unlimited supply of egg nog, festivities, and more. Join
+          us and raise your glass and to give a massive Christmas cheers!
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-emerald-600 p-8">
+          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-emerald-600 p-6 md:p-8">
             <p className="text-emerald-600 uppercase font-light mb-2 md:text-lg">
               When
             </p>
@@ -46,7 +47,7 @@ const Home = () => {
               Dec 27
             </p>
           </div>
-          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-pink-400 p-8">
+          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-pink-400 p-6 md:p-8">
             <p className="text-pink-400 uppercase font-light mb-2 md:text-lg">
               Where
             </p>
@@ -54,7 +55,7 @@ const Home = () => {
               123 NORTH POLE
             </p>
           </div>
-          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-sky-500 p-8">
+          <div className="bg-gradient-to-r from-neutral-300 to-neutral-50 rounded border-b-[20px] border-sky-500 p-6 md:p-8">
             <p className="text-sky-500 uppercase font-light mb-2 md:text-lg">
               Cost
             </p>
